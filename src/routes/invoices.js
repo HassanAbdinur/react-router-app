@@ -1,12 +1,23 @@
+import { Link } from "react-router-dom";
+import { getInvoices } from "../data";
 import './Invoices.css';
 
-function Invoices() {
+const Invoices = () => {
+    let invoices = getInvoices();
     return (
-        <main>
-            <h2>
-                Invoices
-            </h2>
-        </main>
+        <div>
+            <nav>
+                {invoices.map(invoice => (
+                    <Link 
+                        className="link"
+                        to={`/invoices/${invoice.number}`}
+                        key={invoices.number}
+                    >
+                        {invoice.name}
+                    </Link>
+                ))}
+            </nav>
+        </div>
     );
 }
 
