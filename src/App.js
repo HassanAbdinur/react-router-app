@@ -8,8 +8,8 @@ function App() {
         Bookkeeper!
       </h1>
       <nav>
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="/Invoices">Invoices</Link> |{" "}
+        <Link to="/Expenses">Expenses</Link>
       </nav>
     </div>
   );
