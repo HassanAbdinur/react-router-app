@@ -12,6 +12,12 @@ function Invoice() {
                 {invoice.name}: {invoice.number}
             </p>
             <p>Due Date: {invoice.due}</p>
+                <button onClick={() => {
+                    deleteInvoice(invoice.number);
+                    navigate("/invoices");
+                }}>
+                    Delete 
+                </button>
         </main>
     );
 }
