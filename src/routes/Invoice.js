@@ -1,8 +1,18 @@
 import { useParams } from "react-router-dom";
+import { getInvoice } from "../data";
 
 function Invoice() {
     let params = useParams();
-    return <h1>Invoice: {params.invoiceId}</h1>;
+    let invoice = getInvoice(parseInt(params.invoiceId, 10));
+    return (
+        <main style={{ padding: "1rem" }}>
+            <h1>Total Due {invoice.amount}</h1>
+            <p>
+                {invoice.name}: {invoice.number}
+            </p>
+            <p>Due Date: {invoice.due}</p>
+        </main>
+    );
 }
 
 export default Invoice;
