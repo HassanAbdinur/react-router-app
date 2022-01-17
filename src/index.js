@@ -14,6 +14,14 @@ render(
       <Route path="/" element={ <App /> }>
         <Route path="Expenses" element={ <Expenses /> } />
         <Route path="Invoices" element={ <Invoices /> }>
+          <Route 
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Select an invoice</p>
+              </main>
+            }
+          />
         <Route path=":invoiceId" element={ <Invoice /> } />
         </Route>
       <Route 
