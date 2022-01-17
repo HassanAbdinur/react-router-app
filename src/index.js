@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import Expenses from './routes/expenses';
+import Invoices from './routes/Invoices';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById("root");
