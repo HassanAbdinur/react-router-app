@@ -13,6 +13,14 @@ render(
       <Route path="/" element={ <App /> }>
       <Route path="Expenses" element={ <Expenses /> } />
       <Route path="Invoices" element={ <Invoices /> } />
+      <Route 
+        path="*"
+        element={
+          <main style={{ padding: "1rem" }}>
+            <p>There's nothing here!</p>
+          </main>
+        }
+       />
       </Route>
     </Routes>
   </BrowserRouter>, 
