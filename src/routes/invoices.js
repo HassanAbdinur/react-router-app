@@ -1,11 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import { getInvoices } from "../data";
-import './Invoices.css';
 
 const Invoices = () => {
     let invoices = getInvoices();
     return (
-        <div>
+        <div style={{ display: "flex" }}>
             <nav>
                 {invoices.map(invoice => (
                     <Link 
