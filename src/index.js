@@ -1,16 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
 import App from './App';
-import Expenses from './routes/expenses';
-import Invoices from './routes/Invoices';
+import Expenses from './routes/Expenses.js';
+import Invoices from './routes/Invoices.js';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
-    <App />
+    <Routes >
+      <Route path="/" element={ <App /> } />
+      <Route path="Expenses" element={ <Expenses /> } />
+      <Route path="Invoices" element={ <Invoices /> } />
+    </Routes>
   </BrowserRouter>, 
   rootElement
 );
